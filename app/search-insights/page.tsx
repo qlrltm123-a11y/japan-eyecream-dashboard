@@ -118,6 +118,21 @@ export default function SearchInsightsPage() {
       <section>
         <h2 className="section-title">고객이 우리 제품을 떠올리는 순간 (CEP)</h2>
         <GlossaryBox terms={["cep"]} />
+        <div className="bg-amber-50 border border-amber-100 rounded-xl p-4 mb-4 text-sm leading-relaxed text-slate-600">
+          <div className="font-bold text-amber-700 mb-1">🔍 이 '상황'과 '예시 문장'은 어떻게 알아낸 건가요?</div>
+          <p>
+            소비자를 인터뷰한 게 아니라, <b>실제 검색어 자체에 상황이 담겨 있는 경우가 많기 때문</b>입니다.
+            예를 들어 일본어 검색어 중 <span className="text-accent">青クマ(아오쿠마, '푸르스름한 다크서클')</span>이라는 단어가
+            아이크림과 함께 자주 검색된다면, 이 단어를 쓰는 사람은 이미 '잠을 잘 못 자서 다크서클이 진해진' 상황에 있다는 뜻입니다.
+            또한 검색 데이터에는 <b>요일·시간대별 검색량 패턴</b>도 함께 집계되는데, 특정 단어가 '아침 시간대'나 '여름철'에
+            유독 많이 검색되면 '아침에 거울을 보고', '에어컨 때문에 건조해서'와 같은 상황·시점을 추정할 수 있습니다.
+          </p>
+          <p className="mt-2">
+            즉, <b>① 검색어에 포함된 증상·상황 표현</b> + <b>② 그 검색어가 몰리는 시간대/계절 패턴</b>을 조합해서,
+            "이런 단어를 이런 타이밍에 검색하는 사람은 대략 이런 상황일 것이다"라고 역으로 추론한 결과입니다.
+            아래 '예시 문장'은 그 추론을 사람이 이해하기 쉬운 대화체로 풀어쓴 것입니다.
+          </p>
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {ceps.map((cep) => (
             <div key={cep.id} className="card flex gap-4 items-start">
