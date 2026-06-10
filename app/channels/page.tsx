@@ -1,4 +1,5 @@
 ﻿import { channels, bundles, pointPromos } from "@/lib/data";
+import { GlossaryBox } from "@/components/GlossaryBox";
 
 export default function ChannelsPage() {
   return (
@@ -6,10 +7,15 @@ export default function ChannelsPage() {
       <section>
         <h1 className="text-3xl font-extrabold text-slate-900 mb-2">채널 전략</h1>
         <p className="text-slate-500">Qoo10(바이오힐보, 웨이크메이크, 컬러그램) / 라쿠텐(바이오힐보) 채널별 역할 분담 및 실행 전략</p>
+        <p className="text-sm text-slate-500 mt-2">
+          Qoo10과 라쿠텐은 한국의 쿠팡·네이버쇼핑처럼 일본의 대표적인 온라인 쇼핑몰입니다.
+          두 플랫폼의 성격이 달라서, 같은 브랜드라도 '여기서는 신규 고객 유입용', '저기서는 단골 고객 관리용'처럼 역할을 나눠서 운영합니다.
+        </p>
       </section>
 
       <section>
         <h2 className="section-title">채널별 역할 및 KPI</h2>
+        <GlossaryBox terms={["ltv"]} />
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {channels.map((ch) => (
             <div key={ch.name} className="card">
@@ -56,6 +62,7 @@ export default function ChannelsPage() {
 
       <section>
         <h2 className="section-title">Qoo10 번들 전략 (3브랜드 시너지)</h2>
+        <GlossaryBox terms={["bundle"]} />
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {bundles.map((b) => (
             <div key={b.combo} className="card">
@@ -69,6 +76,7 @@ export default function ChannelsPage() {
 
       <section>
         <h2 className="section-title">라쿠텐 포인트 프로모션 전략</h2>
+        <GlossaryBox terms={["point", "spu", "rpp", "megawari"]} />
         <div className="card overflow-x-auto">
           <table className="w-full text-sm">
             <thead>

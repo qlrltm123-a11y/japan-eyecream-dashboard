@@ -1,4 +1,5 @@
 ﻿import { caseStudy } from "@/lib/data";
+import { GlossaryBox } from "@/components/GlossaryBox";
 
 export default function CaseStudyPage() {
   return (
@@ -6,7 +7,13 @@ export default function CaseStudyPage() {
       <section>
         <h1 className="text-3xl font-extrabold text-slate-900 mb-2">케이스 스터디</h1>
         <p className="text-slate-500">바이오힐보 아이크림 - 무광고/무인플루언서로 Qoo10 카테고리 1위 달성 원인 분석</p>
+        <p className="text-sm text-slate-500 mt-2">
+          돈 들인 광고 없이 어떻게 1위를 했을까요? 아래 5가지 이유를 보면, 우리가 앞으로 무엇을 따라 하고
+          무엇을 조심해야 할지 힌트를 얻을 수 있습니다.
+        </p>
       </section>
+
+      <GlossaryBox terms={["ugc", "earnedMedia"]} />
 
       <section className="card">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">

@@ -1,4 +1,5 @@
 ﻿import { ingredientStrategy, quickWins, roadmap, kpiDashboard } from "@/lib/data";
+import { GlossaryBox } from "@/components/GlossaryBox";
 
 export default function StrategyPage() {
   return (
@@ -10,6 +11,10 @@ export default function StrategyPage() {
 
       <section>
         <h2 className="section-title">성분 전략</h2>
+        <p className="text-sm text-slate-500 mb-3">
+          위 '검색 인사이트'에서 일본 소비자들이 많이 찾는 키워드와 고민(다크서클·주름·건조 등)에 맞춰,
+          어떤 성분을 강조해서 제품을 만들고 마케팅할지 정리한 표입니다. 별(★) 개수가 많을수록 우선순위가 높습니다.
+        </p>
         <div className="card overflow-x-auto">
           <table className="w-full text-sm">
             <thead>
@@ -42,6 +47,7 @@ export default function StrategyPage() {
 
       <section>
         <h2 className="section-title">Quick Win 액션 (ICE Score)</h2>
+        <GlossaryBox terms={["ice"]} />
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {quickWins.map((qw) => (
             <div key={qw.id} className="card">
@@ -80,6 +86,10 @@ export default function StrategyPage() {
 
       <section>
         <h2 className="section-title">KPI 대시보드</h2>
+        <p className="text-sm text-slate-500 mb-3">
+          KPI(Key Performance Indicator, 핵심 성과 지표)는 '이 전략이 잘 되고 있는지'를 숫자로 확인하기 위한 목표치입니다.
+          3개월/6개월 뒤 이 숫자에 도달했는지를 보면 성공 여부를 판단할 수 있습니다.
+        </p>
         <div className="card overflow-x-auto">
           <table className="w-full text-sm">
             <thead>

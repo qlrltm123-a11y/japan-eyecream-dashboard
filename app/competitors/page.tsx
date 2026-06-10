@@ -1,4 +1,5 @@
 ﻿import { competitors, priceTiers, dataReliability } from "@/lib/data";
+import { GlossaryBox } from "@/components/GlossaryBox";
 
 const tierColor: Record<string, string> = {
   "프리미엄": "bg-purple-100 text-purple-700",
@@ -19,6 +20,7 @@ export default function CompetitorsPage() {
 
       <section>
         <h2 className="section-title">최근 신제품 동향</h2>
+        <GlossaryBox terms={["tier"]} />
         <div className="card overflow-x-auto">
           <table className="w-full text-sm">
             <thead>
@@ -72,6 +74,10 @@ export default function CompetitorsPage() {
 
       <section>
         <h2 className="section-title">데이터 신뢰도 (교차 검증)</h2>
+        <p className="text-sm text-slate-500 mb-3">
+          한 가지 자료만 보고 판단하면 틀릴 위험이 있어서, 서로 다른 두 가지 출처(예: 검색 데이터 + 설문조사)가
+          같은 결론을 가리키는지 맞춰본 표입니다. 두 근거가 모두 같은 방향이면 '신뢰도 높음'으로 표시했습니다.
+        </p>
         <div className="card overflow-x-auto">
           <table className="w-full text-sm">
             <thead>

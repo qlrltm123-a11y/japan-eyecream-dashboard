@@ -1,4 +1,5 @@
 ﻿import { marketStats, consumerGap, eyeCreamClusterVolume, caseStudy } from "@/lib/data";
+import { GlossaryBox } from "@/components/GlossaryBox";
 
 export default function HomePage() {
   return (
@@ -12,6 +13,21 @@ export default function HomePage() {
           시장조사, 검색 데이터, 경쟁 환경, 전략 통합 뷰
         </p>
       </section>
+
+      <section>
+        <div className="bg-sky-50 border border-sky-100 rounded-xl p-4 text-sm leading-relaxed text-slate-600">
+          <div className="font-bold text-sky-700 mb-2">📖 이 대시보드 보는 법 (마케팅 처음이신 분도 OK)</div>
+          <ul className="list-disc list-inside space-y-1">
+            <li><b>검색 인사이트</b>: 일본 사람들이 실제로 어떤 말로 검색하는지, 어떤 상황에서 아이크림을 떠올리는지 보여줍니다.</li>
+            <li><b>경쟁 환경</b>: 일본에 이미 나와 있는 경쟁 제품들과 가격대를 보여줍니다.</li>
+            <li><b>전략 / 채널 전략</b>: 위 데이터를 바탕으로 '무엇을, 어떤 순서로, 어디서' 할지 정리한 실행 계획입니다.</li>
+            <li><b>케이스 스터디</b>: 실제로 일본에서 1위를 한 우리 브랜드 제품의 성공 이유를 분석한 사례입니다.</li>
+          </ul>
+          <div className="mt-3 text-xs text-slate-400">곳곳에 💡 표시된 파란 박스를 펼쳐보면 어려운 용어를 쉬운 말과 예시로 설명해드립니다.</div>
+        </div>
+      </section>
+
+      <GlossaryBox terms={["gap", "cluster", "cdj", "cep"]} title="아래 내용을 이해하는 데 도움 되는 용어" />
 
       <section>
         <h2 className="section-title">Executive Summary</h2>

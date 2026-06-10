@@ -11,6 +11,7 @@ import {
   Cell,
 } from "recharts";
 import { clusters, cdjStages, ceps, eyeCreamClusterVolume } from "@/lib/data";
+import { GlossaryBox } from "@/components/GlossaryBox";
 
 const eyeCreamIds = ["F", "G", "L", "H", "N"];
 
@@ -29,6 +30,7 @@ export default function SearchInsightsPage() {
 
       <section>
         <h2 className="section-title">클러스터별 검색량</h2>
+        <GlossaryBox terms={["cluster"]} />
         <div className="card">
           <ResponsiveContainer width="100%" height={420}>
             <BarChart data={sortedClusters} layout="vertical" margin={{ left: 40, right: 20 }}>
@@ -59,6 +61,7 @@ export default function SearchInsightsPage() {
                   <th className="py-2 pr-4">클러스터명</th>
                   <th className="py-2 pr-4">검색량</th>
                   <th className="py-2 pr-4">주요 키워드</th>
+                  <th className="py-2 pr-4 min-w-[260px]">쉽게 말하면</th>
                   <th className="py-2 pr-4">비고</th>
                 </tr>
               </thead>
@@ -79,6 +82,7 @@ export default function SearchInsightsPage() {
                     <td className="py-2 pr-4">{c.name}</td>
                     <td className="py-2 pr-4 font-semibold">{c.volume.toLocaleString()}</td>
                     <td className="py-2 pr-4 text-slate-500 text-xs">{c.keywords}</td>
+                    <td className="py-2 pr-4 text-slate-500 text-xs">{c.meaning}</td>
                     <td className="py-2 pr-4 text-slate-500 text-xs">{c.note}</td>
                   </tr>
                 ))}
@@ -90,6 +94,7 @@ export default function SearchInsightsPage() {
 
       <section>
         <h2 className="section-title">CDJ (Customer Decision Journey) 단계별 비중</h2>
+        <GlossaryBox terms={["cdj"]} />
         <div className="card">
           <div className="grid grid-cols-1 md:grid-cols-5 gap-3">
             {cdjStages.map((stage) => (
@@ -107,6 +112,7 @@ export default function SearchInsightsPage() {
 
       <section>
         <h2 className="section-title">CEP (Category Entry Points) 우선순위</h2>
+        <GlossaryBox terms={["cep"]} />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {ceps.map((cep) => (
             <div key={cep.id} className="card flex gap-4 items-start">
@@ -117,6 +123,7 @@ export default function SearchInsightsPage() {
                 <div className="text-xs text-slate-400">{cep.id} - {cep.situation}</div>
                 <div className="font-semibold text-slate-800">{cep.title}</div>
                 <div className="text-xs text-accent mt-1">{cep.keyword}</div>
+                <div className="text-xs text-slate-500 mt-1.5 italic">{cep.example}</div>
               </div>
             </div>
           ))}
