@@ -88,27 +88,29 @@ export const ingredientStrategy = [
   { ingredient: "NMN (검토)", point: "numbuzin 성공 실증, 고가치 성분", target: "30~50대 안티에이징", priority: 1 },
 ];
 
+// Amazon Japan은 별도 법인에서 운영 - 본 로드맵은 우리 팀이 직접 운영하는
+// Qoo10 / 라쿠텐 / @cosme / LIPS / SNS 채널 중심으로 구성
 export const quickWins = [
-  { id: "QW-1", title: "Amazon Japan 탐색 키워드 광고 집중 집행", ice: 5.76, kpi: "Top 20 진입, 리뷰 50건+, 별점 4.0+", status: "검토" },
+  { id: "QW-1", title: "Qoo10 RPP 탐색 키워드 광고 집중 집행 (클러스터 F·G 타겟)", ice: 5.76, kpi: "카테고리 Top 50 진입, 리뷰 30건+, 별점 4.0+", status: "검토" },
   { id: "QW-2", title: "@cosme 선발 리뷰어 체험단 운영 (100명)", ice: 5.67, kpi: "평점 4.0 이상, 리뷰 100건 (3개월)", status: "검토" },
-  { id: "QW-3", title: "CEP 상황공감형 일본어 랜딩페이지 3종", ice: 3.84, kpi: "체류시간 2분+, 이탈률 60% 이하", status: "검토" },
+  { id: "QW-3", title: "CEP 상황공감형 일본어 콘텐츠 3종 → Qoo10·라쿠텐 상세페이지 연동", ice: 3.84, kpi: "체류시간 2분+, 이탈률 60% 이하", status: "검토" },
 ];
 
 export const roadmap = [
-  { phase: "Quick Win (1~3개월)", items: ["Amazon 탐색 키워드 광고", "@cosme 체험단 100명", "CEP 랜딩페이지 3종 (CEP-7,1,4)"] },
-  { phase: "중기 (3~6개월)", items: ["LIPS 인플루언서 10인 30일 체험 콘텐츠", "두유 이소플라본 현지화 캠페인", "드럭스토어 입점 협상(네마와시)"] },
-  { phase: "장기 (6개월+)", items: ["레티놀 대안 성분 라인 강화", "퍼스널라이즈 커뮤니케이션 전환", "EC 직영 구독 모델", "남성 안티에이징 세그먼트 검토"] },
+  { phase: "Quick Win (1~3개월)", items: ["Qoo10 RPP 탐색 키워드 광고 (클러스터 F·G 타겟)", "@cosme 체험단 100명", "CEP 콘텐츠 3종 (CEP-7,1,4) → Qoo10·라쿠텐 상세페이지 연동"] },
+  { phase: "중기 (3~6개월)", items: ["LIPS 인플루언서 10인 30일 체험 콘텐츠", "두유 이소플라본 현지화 캠페인 (SNS·상세페이지)", "라쿠텐 SPU·포인트 프로모션 캘린더 운영으로 진입 가속"] },
+  { phase: "장기 (6개월+)", items: ["레티놀 대안 성분 라인 강화 (제품기획팀 협업 제안)", "구매 데이터 기반 CRM 메시징(재구매 유도) 도입", "Qoo10·라쿠텐 정기배송/구독형 옵션 검토", "남성 안티에이징 세그먼트 리서치 (장기)"] },
 ];
 
 export const kpiDashboard = [
-  { metric: "Amazon 카테고리 랭킹", m3: "Top 20", m6: "Top 10" },
-  { metric: "Amazon 리뷰 수", m3: "50건", m6: "150건" },
-  { metric: "Amazon 별점", m3: "4.0+", m6: "4.2+" },
+  { metric: "Qoo10 카테고리 랭킹", m3: "Top 50", m6: "Top 20" },
+  { metric: "Qoo10 리뷰 수", m3: "30건", m6: "100건" },
+  { metric: "Qoo10 평점", m3: "4.0+", m6: "4.2+" },
+  { metric: "라쿠텐 카테고리 랭킹", m3: "Top 50", m6: "Top 20" },
   { metric: "@cosme 리뷰 수", m3: "100건", m6: "300건" },
   { metric: "@cosme 평점", m3: "4.0+", m6: "4.0+ 유지" },
-  { metric: "브랜드 월간 검색량", m3: "500건", m6: "2,000건" },
-  { metric: "랜딩페이지 전환율", m3: "2.0%+", m6: "2.5%+" },
-  { metric: "아마존 월 판매수량", m3: "300개", m6: "1,000개" },
+  { metric: "브랜드 SNS·검색량", m3: "500건", m6: "2,000건" },
+  { metric: "콘텐츠 페이지 전환율", m3: "2.0%+", m6: "2.5%+" },
 ];
 
 export const channels = [

@@ -7,6 +7,9 @@ export default function StrategyPage() {
       <section>
         <h1 className="text-3xl font-extrabold text-slate-900 mb-2">전략</h1>
         <p className="text-slate-500">성분 전략, 우선순위 액션(ICE Score), 단계별 로드맵, KPI 대시보드</p>
+        <div className="mt-3 text-xs text-slate-400 bg-slate-50 border border-slate-100 rounded-lg px-3 py-2 inline-block">
+          ※ Amazon Japan은 별도 법인에서 운영하므로, 아래 로드맵·KPI는 우리 팀이 직접 운영하는 Qoo10·라쿠텐·@cosme·LIPS·SNS 채널 중심으로 구성했습니다.
+        </div>
       </section>
 
       <section>
