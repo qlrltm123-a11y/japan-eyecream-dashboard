@@ -144,6 +144,9 @@ export default function SearchInsightsPage() {
                 <div className="font-semibold text-slate-800">{cep.title}</div>
                 <div className="text-xs text-accent mt-1">{cep.keyword}</div>
                 <div className="text-xs text-slate-500 mt-1.5 italic">{cep.example}</div>
+                <div className="text-xs text-emerald-700 bg-emerald-50 border border-emerald-100 rounded-lg px-2 py-1.5 mt-2">
+                  <b>필요 UGC(실사용 후기 콘텐츠):</b> {cep.ugc}
+                </div>
               </div>
             </div>
           ))}

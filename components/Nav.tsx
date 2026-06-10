@@ -9,7 +9,7 @@ const links = [
   { href: "/competitors", label: "경쟁 환경" },
   { href: "/strategy", label: "전략" },
   { href: "/channels", label: "채널 전략" },
-  { href: "/case-study", label: "케이스 스터디" },
+  { href: "/execution", label: "실행 플랜" },
 ];
 
 export default function Nav() {
