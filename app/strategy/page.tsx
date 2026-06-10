@@ -50,7 +50,7 @@ export default function StrategyPage() {
 
       <section>
         <h2 className="section-title">Quick Win 액션 (ICE Score)</h2>
-        <GlossaryBox terms={["ice"]} />
+        <GlossaryBox terms={["ice", "keywordPlus"]} />
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {quickWins.map((qw) => (
             <div key={qw.id} className="card">
