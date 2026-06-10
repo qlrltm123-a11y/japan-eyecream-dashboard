@@ -23,20 +23,25 @@ export default function SearchInsightsPage() {
       <section>
         <h1 className="text-3xl font-extrabold text-slate-900 mb-2">검색 인사이트</h1>
         <p className="text-slate-500">
-          리스닝마인드 일본 검색 클러스터 분석 - 14개 클러스터 중 아이크림 직접 연관 클러스터(F, G, L, H, N) 합계{" "}
-          <b className="text-primary">{eyeCreamClusterVolume.toLocaleString()}건</b>
+          일본 소비자들이 어떤 단어로, 얼마나 검색하는지를 분석한 결과입니다. 아래 14개 검색어 그룹 중
+          '아이크림'과 직접 관련된 5개 그룹(눈가 건조·처짐 입문, 눈가 안티에이징 비교, 가성비 아이크림, 연령별 가성비+효과, 처짐케어 후기)의 검색량 합계는{" "}
+          <b className="text-primary">{eyeCreamClusterVolume.toLocaleString()}건</b>입니다.
         </p>
       </section>
 
       <section>
-        <h2 className="section-title">클러스터별 검색량</h2>
+        <h2 className="section-title">검색어 그룹별 검색량 (클러스터)</h2>
+        <p className="text-sm text-slate-500 mb-3">
+          비슷한 의도로 검색하는 단어들을 한 그룹으로 묶은 결과입니다. 막대가 길수록 그 그룹의 검색량이 많고,
+          빨간 막대가 '아이크림'과 직접 관련된 그룹입니다.
+        </p>
         <GlossaryBox terms={["cluster"]} />
         <div className="card">
-          <ResponsiveContainer width="100%" height={420}>
-            <BarChart data={sortedClusters} layout="vertical" margin={{ left: 40, right: 20 }}>
+          <ResponsiveContainer width="100%" height={480}>
+            <BarChart data={sortedClusters} layout="vertical" margin={{ left: 110, right: 20 }}>
               <CartesianGrid strokeDasharray="3 3" horizontal={false} />
               <XAxis type="number" tickFormatter={(v) => v.toLocaleString()} />
-              <YAxis type="category" dataKey="id" width={30} />
+              <YAxis type="category" dataKey="label" width={110} tick={{ fontSize: 12 }} />
               <Tooltip
                 formatter={(value: number, _name, props) => [
                   value.toLocaleString(),
@@ -57,10 +62,10 @@ export default function SearchInsightsPage() {
             <table className="w-full text-sm">
               <thead>
                 <tr className="text-left text-slate-400 border-b">
-                  <th className="py-2 pr-4">ID</th>
-                  <th className="py-2 pr-4">클러스터명</th>
+                  <th className="py-2 pr-4">그룹 이름 (요약)</th>
+                  <th className="py-2 pr-4">그룹 이름 (상세)</th>
                   <th className="py-2 pr-4">검색량</th>
-                  <th className="py-2 pr-4">주요 키워드</th>
+                  <th className="py-2 pr-4">주요 검색어</th>
                   <th className="py-2 pr-4 min-w-[260px]">쉽게 말하면</th>
                   <th className="py-2 pr-4">비고</th>
                 </tr>
@@ -76,7 +81,7 @@ export default function SearchInsightsPage() {
                             : "bg-slate-100 text-slate-500"
                         }`}
                       >
-                        {c.id}
+                        {c.label}
                       </span>
                     </td>
                     <td className="py-2 pr-4">{c.name}</td>
@@ -93,7 +98,7 @@ export default function SearchInsightsPage() {
       </section>
 
       <section>
-        <h2 className="section-title">CDJ (Customer Decision Journey) 단계별 비중</h2>
+        <h2 className="section-title">고객이 구매까지 거치는 5단계 여정 (CDJ)</h2>
         <GlossaryBox terms={["cdj"]} />
         <div className="card">
           <div className="grid grid-cols-1 md:grid-cols-5 gap-3">
@@ -111,7 +116,7 @@ export default function SearchInsightsPage() {
       </section>
 
       <section>
-        <h2 className="section-title">CEP (Category Entry Points) 우선순위</h2>
+        <h2 className="section-title">고객이 우리 제품을 떠올리는 순간 (CEP)</h2>
         <GlossaryBox terms={["cep"]} />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {ceps.map((cep) => (

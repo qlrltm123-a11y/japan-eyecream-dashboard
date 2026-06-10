@@ -49,14 +49,17 @@ export default function StrategyPage() {
       </section>
 
       <section>
-        <h2 className="section-title">Quick Win 액션 (ICE Score)</h2>
+        <h2 className="section-title">바로 시작할 수 있는 우선순위 액션 (Quick Win)</h2>
+        <p className="text-sm text-slate-500 mb-3">
+          아래 점수는 '효과 크기 × 성공 확신도 × 실행 난이도'를 종합한 우선순위 점수(ICE Score)입니다. 숫자가 높을수록 먼저 시도해볼 만한 액션입니다.
+        </p>
         <GlossaryBox terms={["ice", "keywordPlus"]} />
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {quickWins.map((qw) => (
             <div key={qw.id} className="card">
               <div className="flex items-center justify-between mb-2">
                 <span className="badge bg-rose-100 text-primary">{qw.id}</span>
-                <span className="text-lg font-extrabold text-accent">ICE {qw.ice}</span>
+                <span className="text-lg font-extrabold text-accent">우선순위 점수 {qw.ice}</span>
               </div>
               <div className="font-semibold text-slate-800">{qw.title}</div>
               <div className="text-xs text-slate-500 mt-2">KPI: {qw.kpi}</div>
