@@ -6,8 +6,8 @@ import { usePathname } from "next/navigation";
 const links = [
   { href: "/", label: "개요" },
   { href: "/search-insights", label: "검색 인사이트" },
+  { href: "/cep-ugc", label: "CEP & UGC" },
   { href: "/competitors", label: "경쟁 환경" },
-  { href: "/strategy", label: "전략" },
   { href: "/channels", label: "채널 전략" },
   { href: "/execution", label: "실행 플랜" },
 ];
