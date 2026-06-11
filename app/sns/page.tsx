@@ -108,6 +108,55 @@ export default function SnsPage() {
       </section>
 
       <section>
+        <h2 className="section-title">대표 게시물</h2>
+        <p className="text-sm text-slate-500 mb-3">
+          실제로 반응이 좋았던 게시물 예시입니다. 클릭하면 원본 게시물로 이동합니다.
+        </p>
+        <div className="space-y-3 mb-4">
+          {snsData.representativePosts.youtube.map((p) => (
+            <a
+              key={p.url}
+              href={p.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="card flex gap-4 items-start hover:bg-slate-50 transition-colors"
+            >
+              <div className="shrink-0 w-14 h-14 rounded-xl bg-rose-100 text-primary flex items-center justify-center font-extrabold text-xs text-center">
+                {p.type === "shorts" ? "쇼츠" : "영상"}
+              </div>
+              <div>
+                <div className="font-semibold text-slate-800">{p.title}</div>
+                <div className="text-xs text-slate-400 mt-0.5">
+                  {p.channel} · 조회수 {p.views.toLocaleString()}회
+                </div>
+                <p className="text-sm text-slate-600 mt-1.5">{p.summary}</p>
+              </div>
+            </a>
+          ))}
+        </div>
+        <div className="space-y-3">
+          {snsData.representativePosts.instagram.map((p) => (
+            <a
+              key={p.url}
+              href={p.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="card flex gap-4 items-start hover:bg-slate-50 transition-colors"
+            >
+              <div className="shrink-0 w-14 h-14 rounded-xl bg-sky-100 text-sky-700 flex items-center justify-center font-extrabold text-xs">
+                IG
+              </div>
+              <div>
+                <div className="font-semibold text-slate-800">{p.user}</div>
+                <div className="text-xs text-slate-400 mt-0.5">좋아요 {p.likes.toLocaleString()}개</div>
+                <p className="text-sm text-slate-600 mt-1.5">{p.summary}</p>
+              </div>
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <section>
         <h2 className="section-title">그래서 우리 팀은 뭘 하면 될까? (시사점)</h2>
         <div className="space-y-4">
           {snsData.implications.map((imp, i) => (

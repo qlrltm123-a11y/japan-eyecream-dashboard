@@ -120,5 +120,67 @@ export const snsData = {
       "title": "타겟은 30대 '예방 입문층'과 40~50대 '고민 해결층' 이원화",
       "desc": "'아라사(30세 전후)부터는 투자형 아이크림' 담론과 40~60대 에이징케어 콘텐츠가 공존. Qoo10은 메가할인 주 고객인 20~30대에 '첫 아이크림·예방' 메시지, 라쿠텐은 40~50대에 '주름·처짐 집중 케어' 메시지로 크리에이티브를 분리 운영할 것"
     }
-  ]
+  ],
+  "representativePosts": {
+    "youtube": [
+      {
+        "title": "데파코스급 눈가·입가 크림으로 동안 만들기 (シワたるみしぼみ)",
+        "channel": "化粧品子ちゃん (화장품코짱)",
+        "views": 767790,
+        "type": "shorts",
+        "summary": "백화점 고가 라인과 비교하며 성분을 분석하는 쇼츠. '프치프라인데 데파코스급 효과'라는 비교 구도가 그대로 적중한 사례",
+        "url": "https://www.youtube.com/shorts/g--Iv01fzy4"
+      },
+      {
+        "title": "シワ改善対決！ POLA 링클샷 vs 엘릭시르 링클크림 1년 발라본 결과",
+        "channel": "たたらのコスメレビュー (타타라의 코스메 리뷰)",
+        "views": 744913,
+        "type": "video",
+        "summary": "고가 vs 중가 브랜드를 1년간 직접 사용해 비교한 장기 검증 콘텐츠. '진짜 효과 있는지' 증거를 보여주는 포맷이 최고 조회수 기록",
+        "url": "https://www.youtube.com/watch?v=1SCieAshq9s&t=36s"
+      },
+      {
+        "title": "눈가 건조에 추천하는 아이크림 (#薬剤師 약사 추천)",
+        "channel": "薬剤師ナカショウ (약사 나카쇼)",
+        "views": 702438,
+        "type": "shorts",
+        "summary": "약사라는 전문가 타이틀을 앞세운 1분 쇼츠. 짧은 영상에서도 '자격 보증'이 신뢰를 만들어 높은 조회수로 연결됨",
+        "url": "https://www.youtube.com/shorts/Ph4TDBk-Yu4"
+      },
+      {
+        "title": "내가 사랑하는 POLA 3종 세트 — 눈가 젊음과 주름 개선",
+        "channel": "HIRO BEAUTY CHANNEL",
+        "views": 391100,
+        "type": "shorts",
+        "summary": "인플루언서가 본인이 쓰는 '세트'를 추천하는 큐레이션형 콘텐츠. 번들(세트) 제안이 소비자에게 잘 받아들여짐을 보여주는 사례",
+        "url": "https://www.youtube.com/shorts/cUzUP6IjqRQ"
+      }
+    ],
+    "instagram": [
+      {
+        "user": "@kudo_shizuka",
+        "likes": 52075,
+        "summary": "건조하면 아이크림 하나만 들고 다녀도 눈가 주름(放射線状の線)이 덜해진다는 일상 공유 글. '주름'이라는 단어 대신 '스마일라인'으로 부드럽게 표현 — 약사법 표현 규제를 우회하는 실제 사례",
+        "url": "https://www.instagram.com/p/CjYzogGItBz/"
+      },
+      {
+        "user": "@nako_iimonohakken",
+        "likes": 21103,
+        "summary": "다이소에서 발견한 '롤타입 아이크림 용기'를 소개하는 가성비 발견형 콘텐츠. 마사지 기능 + 저렴한 가격 조합이 폭발적 반응을 얻음",
+        "url": "https://www.instagram.com/p/C7RYJhTSGtO/"
+      },
+      {
+        "user": "@romi_1006",
+        "likes": 8996,
+        "summary": "'품절 대란 다크서클(クマ) 크림' — 990엔, 레티놀·나이아신아마이드·비타민C 유도체 함유, 저자극 처방을 강조. 가성비+고함량 성분 조합이 바이럴 포인트",
+        "url": "https://www.instagram.com/p/C0JVO2lLcF1/"
+      },
+      {
+        "user": "@megumi_kanzaki",
+        "likes": 9427,
+        "summary": "'이렇게 하면 좋아요'라는 구체적인 아이크림 바르는 법(塗り方) 강좌. 사용법 콘텐츠가 저장·공유로 이어져 좋아요 수가 높게 유지됨",
+        "url": "https://www.instagram.com/p/C8t_jEyPfqg/"
+      }
+    ]
+  }
 };
