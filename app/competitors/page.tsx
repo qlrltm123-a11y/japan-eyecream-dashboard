@@ -1,4 +1,4 @@
-﻿import { competitors, priceTiers, dataReliability } from "@/lib/data";
+﻿import { competitors, priceTiers, dataReliability, mediaExposure } from "@/lib/data";
 import { GlossaryBox } from "@/components/GlossaryBox";
 
 const tierColor: Record<string, string> = {
@@ -16,6 +16,36 @@ export default function CompetitorsPage() {
       <section>
         <h1 className="text-3xl font-extrabold text-slate-900 mb-2">경쟁 환경</h1>
         <p className="text-slate-500">2025년 일본 아이크림 시장 주요 신제품 동향과 가격대별 포지셔닝 맵</p>
+      </section>
+
+      <section>
+        <h2 className="section-title">외부 미디어 노출 현황</h2>
+        <p className="text-sm text-slate-500 mb-3">
+          일본 현지 랭킹·매체에서 우리 제품(BOH 프로바이오덤 리프팅 아이링클크림)이 경쟁 제품들과 함께 어떻게 노출되고 있는지 정리한 현황입니다.
+          클릭하면 원본 콘텐츠로 이동합니다.
+        </p>
+        <div className="card overflow-x-auto">
+          <table className="w-full text-sm">
+            <thead>
+              <tr className="text-left text-slate-400 border-b">
+                <th className="py-2 pr-4">콘텐츠</th>
+                <th className="py-2 pr-4">노출 현황</th>
+              </tr>
+            </thead>
+            <tbody>
+              {mediaExposure.map((m) => (
+                <tr key={m.title} className="border-b last:border-0">
+                  <td className="py-2 pr-4 font-semibold whitespace-nowrap">
+                    <a href={m.url} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                      {m.title}
+                    </a>
+                  </td>
+                  <td className="py-2 pr-4 text-slate-600">{m.detail}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </section>
 
       <section>

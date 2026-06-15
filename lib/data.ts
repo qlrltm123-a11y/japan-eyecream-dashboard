@@ -307,6 +307,15 @@ export const executionPlan = {
   },
 };
 
+export const mediaExposure = [
+  { title: "LIPS 한국 아이크림 랭킹 63선 (2026.06.10)", detail: "BOH 프로바이오덤 리프팅 아이링클크림 1위 (LIPS 베스트코스메 2023 수상, 후기 565건). 동일 랭킹 내 Medicube 10위, Dr.Melaxin 칼슘본딩 13위 포함", url: "https://lipscosme.com/rankings/222/brand_features/3" },
+  { title: "楽天 RAXY 한국 아이크림 추천 9선 (2026.02.03)", detail: "BOH가 첫 번째 추천 제품으로 소개. 동일 기사 내 AHC 포함", url: "https://raxy.rakuten.co.jp/beautytopics/articles/2025/article1516/" },
+  { title: "LIPS 비교 리뷰", detail: "현지 제품 및 국내 타브랜드와 비교. 유사 가격대·국내 타브랜드 중 BOH 최우선 추천", url: "https://lipscosme.com/posts/8262900" },
+  { title: "X - @marublog2626 (2026.04.16)", detail: "현지 제품 및 달바와 비교", url: "https://x.com/marublog2626/status/2044701832254243018" },
+  { title: "X - @kojikichanel (2026.05.26)", detail: "Dr.Melaxin, AHC, medicube와 같은 국내 제품과 비교", url: "https://x.com/kojikichanel/status/2059163153582456868" },
+  { title: "LIPS - Dr.Melaxin 칼슘본딩 아이크림 리뷰", detail: "Dr.Melaxin 제품 리뷰에 BOH 제품 태그가 함께 노출", url: "https://lipscosme.com/posts/8726746" },
+];
+
 export const dataReliability = [
   { claim: "눈가 처짐·탄력 저하가 최대 고민", source1: "클러스터 F 88,062건 1위", source2: "마이나비: 다크서클 61.5%, 주름 57.9%", confidence: "높음" },
   { claim: "탐색 단계 소비자가 대다수", source1: "CDJ 탐색 88.1%", source2: "케어 미실시율 69.2%와 정합", confidence: "높음" },
