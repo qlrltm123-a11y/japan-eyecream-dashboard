@@ -8,6 +8,7 @@ const links = [
   { href: "/search-insights", label: "검색 인사이트" },
   { href: "/cep-ugc", label: "CEP & UGC" },
   { href: "/competitors", label: "경쟁 환경" },
+  { href: "/positioning", label: "포지셔닝 전략" },
   { href: "/sns", label: "SNS 분석" },
   { href: "/channels", label: "채널 전략" },
   { href: "/execution", label: "실행 플랜" },
