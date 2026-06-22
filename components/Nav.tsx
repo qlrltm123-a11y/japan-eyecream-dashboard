@@ -20,9 +20,18 @@ export default function Nav() {
   return (
     <nav className="bg-white border-b border-slate-200 sticky top-0 z-50">
       <div className="max-w-6xl mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
-          <div className="font-extrabold text-lg text-primary">
-            일본 아이크림 시장 대시보드
+        <div className="flex items-center justify-between h-16 gap-3">
+          <div className="flex items-center gap-3 shrink-0">
+            <a
+              href="https://boh-tankcream-dashboard.vercel.app/"
+              className="text-xs font-bold text-slate-400 hover:text-primary whitespace-nowrap"
+            >
+              ← 전체 허브
+            </a>
+            <span className="text-slate-200">|</span>
+            <div className="font-extrabold text-lg text-primary whitespace-nowrap">
+              일본 아이크림 시장 대시보드
+            </div>
           </div>
           <div className="flex gap-1 overflow-x-auto">
             {links.map((link) => {
